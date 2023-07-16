@@ -8,6 +8,6 @@
 
 #### Runtime: 106ms (Beats 95.57%)
 
-#### Memory: 61.3 MBMB (Beats 42.34%)
+#### Memory: 61.3 MB (Beats 42.34%)
 
 #### Time Complexity: $O(n)$
