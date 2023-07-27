@@ -1,13 +1,13 @@
 ## 62. Unique Paths
 
-#### Date: 10/25/2022
+#### Date: 07/27/2023
 
-#### Time: idk
+#### Time: 00:14:26
 
-#### Attempts: 1
+#### Attempts: 2
 
-#### Runtime: 1ms (Beats 7.76%)
+#### Runtime: 0ms (Beats 100%)
 
-#### Memory: 40.9MB (Beats 5.31%)
+#### Memory: 5.8MB (Beats 97.39%)
 
-#### Time Complexity: $O(n^2)$
+#### Time Complexity: $O(n)$
