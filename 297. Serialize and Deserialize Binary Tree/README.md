@@ -2,12 +2,12 @@
 
 #### Date: 08/30/2023
 
-#### Time: too long
+#### Time: too long :(
 
 #### Attempts: 1
 
-#### Runtime: 107ms (Beats 9.85%)
+#### Runtime: 32ms (Beats 85.66%)
 
-#### Memory: 645.5MB (Beats 5%)
+#### Memory: 39.6MB (Beats 19.14%)
 
 #### Time Complexity: $O(n)$

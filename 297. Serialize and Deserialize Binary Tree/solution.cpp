@@ -9,41 +9,40 @@
  */
 class Codec {
 public:
-    int curr = 0;
+    string s;
+    int curr;
+
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
-        string ans = "";
-        if (root == nullptr) return ans;
-        ans += to_string(root->val);
-        if (!root->left && !root->right) return ans;
-        ans.push_back('(');
-        if (root->left)
-            ans += serialize(root->left);
+        if (root == nullptr) return "#";
+        string ans = to_string(root->val);
+        ans.push_back(','),
+        ans += serialize(root->left);
         ans.push_back(',');
-        if (root->right)
-            ans += serialize(root->right);
-        ans.push_back(')');
+        ans += serialize(root->right);
         return ans;
     }
 
-    // Decodes your encoded data to tree.
-    // 5(300(,-4),),2(7,))
-    TreeNode* deserialize(string data) {
-        if (data == "") return nullptr;
+    TreeNode* dfs() {
+        if (curr >= s.length()) return nullptr;
+        int end = curr;
         int start = curr;
-        int len = 0;
-        while (start + len < data.length() && data[start + len] != '(' && data[start + len] != ')' && data[start + len] != ',') 
-            len++;
-        curr = start + len + 1;
-        if (len == 0) return nullptr;
-        TreeNode* root = new TreeNode(stoi(data.substr(start, len)));
-        if (start + len >= data.length()) return root;
-        if (data[start + len] == '(') {
-            root->left = deserialize(data);
-            root->right = deserialize(data);
-            curr++;
-        }
+        while (end < s.length() && s[end] != ',') end++;
+        curr = end + 1;
+        if (s[start] == '#') return nullptr;
+        TreeNode* root = new TreeNode(stoi(s.substr(start, end - start)));
+        root->left = dfs();
+        root->right = dfs();
         return root;
+    }
+
+    // Decodes your encoded data to tree.
+    // 1,2,#,#,3,4,#,#,5,#,#
+    // 1,2,3,4,#
+    TreeNode* deserialize(string data) {
+        s = data;
+        curr = 0;
+        return dfs();
     }
 };
 
