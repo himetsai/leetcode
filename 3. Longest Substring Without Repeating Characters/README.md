@@ -1,13 +1,13 @@
 ## 3. Longest Substring Without Repeating Characters
 
-#### Date: 12/29/2022
+#### Date: 10/13/2023
 
-#### Time: idk
+#### Time: 00:08:00
 
 #### Attempts: 3
 
-#### Runtime: 110ms (Beats 14.19%)
+#### Runtime: 4ms (Beats 93.38%)
 
-#### Memory: 42.9MB (Beats 86.80%)
+#### Memory: 7.17MB (Beats 93.59%)
 
 #### Time Complexity: $O(n)$
